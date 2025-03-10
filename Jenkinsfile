@@ -12,7 +12,7 @@ pipeline {
         stage("Setup Docker Permissions") {
             steps {
                 script {
-                    sh 'sudo chmod 666 /var/run/docker.sock'
+                    sh 'chmod 666 /var/run/docker.sock'
                 }
             }
         }
