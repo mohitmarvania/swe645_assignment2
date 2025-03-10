@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo "Building Docker image..."'
-                    sh "sudo docker login -u amisha1407 -p 123ami456A@"
+                    sh "docker login -u amisha1407 -p 123ami456A@"
 
                     // Build Docker image with a timestamped tag
                     def customImage = docker.build("${DOCKER_IMAGE}:${BUILD_TIMESTAMP}", "--build-arg BUILD_ID=${BUILD_TIMESTAMP} .")
@@ -32,7 +32,7 @@ pipeline {
         stage("Pushing Image to DockerHub") {
             steps {
                 script {
-                    sh "sudo docker push ${DOCKER_IMAGE}:${BUILD_TIMESTAMP}"
+                    sh "docker push ${DOCKER_IMAGE}:${BUILD_TIMESTAMP}"
                 }
             }
         }
@@ -42,9 +42,9 @@ pipeline {
                 script {
                     // sh "kubectl set image deployment/${RANCHER_DEPLOYMENT} container-0=${DOCKER_IMAGE}:${BUILD_TIMESTAMP} -n ${RANCHER_NAMESPACE}"
                     // sh 'kubectl set image deployment/assign2-deployment container-0=amisha1407/amishafinalnew:${BUILD_TIMESTAMP} -n default'
-                    sh "sudo kubectl set image deployment/${RANCHER_DEPLOYMENT} assignment2=${DOCKER_IMAGE}:${BUILD_TIMESTAMP} --namespace=default"
+                    sh "kubectl set image deployment/${RANCHER_DEPLOYMENT} assignment2=${DOCKER_IMAGE}:${BUILD_TIMESTAMP} --namespace=default"
                     // sh "kubectl set image deployment/assign2-deployment container-0=amisha1407/amishafinalnew:${BUILD_TIMESTAMP} -n default --insecure-skip-tls-verify"
-                    sh "sudo kubectl rollout restart deployment/${RANCHER_DEPLOYMENT} -n ${RANCHER_NAMESPACE}"
+                    sh "kubectl rollout restart deployment/${RANCHER_DEPLOYMENT} -n ${RANCHER_NAMESPACE}"
                 }
             }
         }
