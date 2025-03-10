@@ -1,403 +1,81 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Amisha's Student Survey Form</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-      :root {
-        --gmu-green: #006633;
-        --gmu-gold: #ffcc33;
-        --gmu-dark-green: #004d26;
-        --gmu-light-gold: #ffe066;
-        --gmu-gray: #4f5b62;
-        --gmu-light-gray: #f5f5f5;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        background-color: var(--gmu-light-gray);
-        margin: 0;
-        padding: 20px;
-      }
-
-      .container {
-        max-width: 650px;
-        margin: 30px auto;
-        padding: 0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      .form-content {
-        padding: 25px 30px;
-      }
-
-      .w3-input,
-      .w3-select {
-        margin-bottom: 22px;
-        border-radius: 4px;
-        padding: 10px;
-      }
-
-      h2 {
-        color: var(--gmu-green);
-        border-bottom: 3px solid var(--gmu-gold);
-        padding-bottom: 10px;
-        margin-top: 0;
-      }
-
-      .gmu-text {
-        color: var(--gmu-green) !important;
-        font-weight: 600;
-        display: block;
-        margin-bottom: 6px;
-      }
-
-      .gmu-button {
-        background-color: var(--gmu-green) !important;
-        color: white !important;
-        transition: background-color 0.3s;
-        border-radius: 4px;
-        font-weight: bold;
-        padding: 12px !important;
-        margin-top: 25px !important;
-      }
-
-      .gmu-button:hover {
-        background-color: var(--gmu-dark-green) !important;
-      }
-
-      .form-header {
-        background-color: var(--gmu-green);
-        color: white;
-        padding: 20px 30px;
-        border-bottom: 5px solid var(--gmu-gold);
-      }
-
-      .form-header h2 {
-        color: white !important;
-        border-bottom: none !important;
-        margin: 0;
-        padding: 0;
-        font-size: 26px;
-      }
-
-      input:focus,
-      select:focus,
-      textarea:focus {
-        border-color: var(--gmu-gold) !important;
-        box-shadow: 0 0 5px var(--gmu-light-gold);
-      }
-
-      footer {
-        text-align: center;
-        margin-top: 20px;
-        padding: 15px;
-        font-size: 0.9em;
-        color: var(--gmu-gray);
-        border-top: 1px solid #e0e0e0;
-      }
-
-      /* Checkbox and Radio Button Styling */
-      .option-group {
-        margin-bottom: 20px;
-      }
-
-      .option-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 5px;
-      }
-
-      .option-item input[type="checkbox"],
-      .option-item input[type="radio"] {
-        margin-right: 10px;
-        cursor: pointer;
-        width: 18px;
-        height: 18px;
-      }
-
-      .option-item label {
-        cursor: pointer;
-        padding-top: 2px;
-      }
-
-      textarea {
-        min-height: 120px;
-        border-radius: 4px;
-      }
-
-      .section {
-        margin-bottom: 25px;
-      }
-
-      .section-title {
-        font-weight: bold;
-        color: var(--gmu-green);
-        border-bottom: 2px solid var(--gmu-light-gold);
-        padding-bottom: 8px;
-        margin-bottom: 15px;
-      }
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+        .w3-input, .w3-select, .w3-check, .w3-radio { margin-bottom: 15px; }
     </style>
-  </head>
-  <body>
-    <div class="w3-container w3-card w3-white container">
-      <div class="form-header">
+</head>
+<body class="w3-light-grey">
+    
+    <div class="w3-container w3-card w3-white w3-margin-top container">
         <h2 class="w3-center">Student Survey Form</h2>
-      </div>
-
-      <div class="form-content">
         <form action="#" method="post">
-          <div class="section">
-            <div class="section-title">Personal Information</div>
+            
+            <label class="w3-text-teal"><b>First Name</b></label>
+            <input class="w3-input w3-border" type="text" name="first_name" required>
 
-            <label class="gmu-text">First Name</label>
-            <input
-              class="w3-input w3-border"
-              type="text"
-              name="first_name"
-              required
-            />
+            <label class="w3-text-teal"><b>Last Name</b></label>
+            <input class="w3-input w3-border" type="text" name="last_name" required>
+            
+            <label class="w3-text-teal"><b>Street Address</b></label>
+            <input class="w3-input w3-border" type="text" name="address" required>
+            
+            <label class="w3-text-teal"><b>City</b></label>
+            <input class="w3-input w3-border" type="text" name="city" required>
 
-            <label class="gmu-text">Last Name</label>
-            <input
-              class="w3-input w3-border"
-              type="text"
-              name="last_name"
-              required
-            />
-          </div>
+            <label class="w3-text-teal"><b>State</b></label>
+            <input class="w3-input w3-border" type="text" name="state" required>
 
-          <div class="section">
-            <div class="section-title">Contact Information</div>
+            <label class="w3-text-teal"><b>Zip Code</b></label>
+            <input class="w3-input w3-border" type="text" name="zip" required>
+            
+            <label class="w3-text-teal"><b>Telephone Number</b></label>
+            <input class="w3-input w3-border" type="tel" name="phone" required>
+            
+            <label class="w3-text-teal"><b>Email</b></label>
+            <input class="w3-input w3-border" type="email" name="email" required>
 
-            <label class="gmu-text">Street Address</label>
-            <input
-              class="w3-input w3-border"
-              type="text"
-              name="address"
-              required
-            />
+            <label class="w3-text-teal"><b>Date of Survey</b></label>
+            <input class="w3-input w3-border" type="date" name="survey_date" required>
+            
+            <label class="w3-text-teal"><b>What did you like most about the campus? (Select all that apply)</b></label>
+            <p><input class="w3-check" type="checkbox" name="liked[]" value="Students"> Students</p>
+            <p><input class="w3-check" type="checkbox" name="liked[]" value="Location"> Location</p>
+            <p><input class="w3-check" type="checkbox" name="liked[]" value="Campus"> Campus</p>
+            <p><input class="w3-check" type="checkbox" name="liked[]" value="Atmosphere"> Atmosphere</p>
+            <p><input class="w3-check" type="checkbox" name="liked[]" value="Dorm Rooms"> Dorm Rooms</p>
+            <p><input class="w3-check" type="checkbox" name="liked[]" value="Sports"> Sports</p>
 
-            <div class="w3-row-padding" style="margin: 0 -8px">
-              <div class="w3-half">
-                <label class="gmu-text">City</label>
-                <input
-                  class="w3-input w3-border"
-                  type="text"
-                  name="city"
-                  required
-                />
-              </div>
-              <div class="w3-quarter">
-                <label class="gmu-text">State</label>
-                <input
-                  class="w3-input w3-border"
-                  type="text"
-                  name="state"
-                  required
-                />
-              </div>
-              <div class="w3-quarter">
-                <label class="gmu-text">Zip Code</label>
-                <input
-                  class="w3-input w3-border"
-                  type="text"
-                  name="zip"
-                  required
-                />
-              </div>
-            </div>
+            <label class="w3-text-teal"><b>How did you become interested in our university?</b></label>
+            <p><input class="w3-radio" type="radio" name="interest" value="Friends" required> Friends</p>
+            <p><input class="w3-radio" type="radio" name="interest" value="Television" required> Television</p>
+            <p><input class="w3-radio" type="radio" name="interest" value="Internet" required> Internet</p>
+            <p><input class="w3-radio" type="radio" name="interest" value="Other" required> Other</p>
 
-            <div class="w3-row-padding" style="margin: 0 -8px">
-              <div class="w3-half">
-                <label class="gmu-text">Telephone Number</label>
-                <input
-                  class="w3-input w3-border"
-                  type="tel"
-                  name="phone"
-                  required
-                />
-              </div>
-              <div class="w3-half">
-                <label class="gmu-text">Email</label>
-                <input
-                  class="w3-input w3-border"
-                  type="email"
-                  name="email"
-                  required
-                />
-              </div>
-            </div>
-          </div>
 
-          <div class="section">
-            <div class="section-title">Survey Information</div>
-
-            <label class="gmu-text">Date of Survey</label>
-            <input
-              class="w3-input w3-border"
-              type="date"
-              name="survey_date"
-              required
-            />
-
-            <label class="gmu-text"
-              >What did you like most about the campus? (Select all that
-              apply)</label
-            >
-            <div class="option-group">
-              <div class="option-item">
-                <input
-                  class="w3-check"
-                  type="checkbox"
-                  id="students"
-                  name="liked[]"
-                  value="Students"
-                />
-                <label for="students">Students</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-check"
-                  type="checkbox"
-                  id="location"
-                  name="liked[]"
-                  value="Location"
-                />
-                <label for="location">Location</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-check"
-                  type="checkbox"
-                  id="campus"
-                  name="liked[]"
-                  value="Campus"
-                />
-                <label for="campus">Campus</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-check"
-                  type="checkbox"
-                  id="atmosphere"
-                  name="liked[]"
-                  value="Atmosphere"
-                />
-                <label for="atmosphere">Atmosphere</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-check"
-                  type="checkbox"
-                  id="dorms"
-                  name="liked[]"
-                  value="Dorm Rooms"
-                />
-                <label for="dorms">Dorm Rooms</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-check"
-                  type="checkbox"
-                  id="sports"
-                  name="liked[]"
-                  value="Sports"
-                />
-                <label for="sports">Sports</label>
-              </div>
-            </div>
-
-            <label class="gmu-text"
-              >How did you become interested in our university?</label
-            >
-            <div class="option-group">
-              <div class="option-item">
-                <input
-                  class="w3-radio"
-                  type="radio"
-                  id="friends"
-                  name="interest"
-                  value="Friends"
-                  required
-                />
-                <label for="friends">Friends</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-radio"
-                  type="radio"
-                  id="television"
-                  name="interest"
-                  value="Television"
-                  required
-                />
-                <label for="television">Television</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-radio"
-                  type="radio"
-                  id="internet"
-                  name="interest"
-                  value="Internet"
-                  required
-                />
-                <label for="internet">Internet</label>
-              </div>
-              <div class="option-item">
-                <input
-                  class="w3-radio"
-                  type="radio"
-                  id="other"
-                  name="interest"
-                  value="Other"
-                  required
-                />
-                <label for="other">Other</label>
-              </div>
-            </div>
-
-            <label class="gmu-text"
-              >Would you recommend this school to others?</label
-            >
+            <label>Would you recommend this school to others?</label>
             <select name="recommendation" class="w3-select w3-border">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="very_likely">Very Likely</option>
-              <option value="likely">Likely</option>
-              <option value="unlikely">Unlikely</option>
+                <option value="very_likely">Very Likely</option>
+                <option value="likely">Likely</option>
+                <option value="unlikely">Unlikely</option>
             </select>
 
-            <label class="gmu-text"
-              >Enter 10 comma-separated numbers (1-100) for the raffle:</label
-            >
-            <input
-              type="text"
-              name="raffle"
-              class="w3-input w3-border"
-              placeholder="e.g., 10, 23, 45, 67, 89"
-            />
+            <label>Enter 10 comma-separated numbers (1-100) for the raffle:</label>
+            <input type="text" name="raffle" class="w3-input w3-border" placeholder="e.g., 10, 23, 45, 67, 89">
 
-            <label class="gmu-text">Comments or Suggestions</label>
-            <textarea
-              class="w3-input w3-border"
-              name="comments"
-              rows="4"
-              placeholder="Your feedback..."
-            ></textarea>
-          </div>
-
-          <button class="w3-button w3-block gmu-button" type="submit">
-            Submit Survey
-          </button>
+            <label class="w3-text-teal"><b>Comments or Suggestions</b></label>
+            <textarea class="w3-input w3-border" name="comments" rows="4" placeholder="Your feedback..."></textarea>
+            
+            <button class="w3-button w3-teal w3-margin-top w3-block" type="submit">Submit</button>
         </form>
-      </div>
     </div>
-  </body>
+    
+</body>
 </html>
