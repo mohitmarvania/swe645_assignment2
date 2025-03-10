@@ -9,13 +9,6 @@ pipeline {
     }
     
     stages {
-        stage("Setup Docker Permissions") {
-            steps {
-                script {
-                    sh 'chmod 666 /var/run/docker.sock'
-                }
-            }
-        }
         stage("Checkout Code") {
             steps {
                 script {
